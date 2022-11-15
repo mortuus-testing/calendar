@@ -1,0 +1,48 @@
+.note {
+  --size: 40px;
+  width: 100%;
+  display: flex;
+}
+.note-control-wrapper {
+  width: var(--size);
+  height: var(--size);
+  min-width: var(--size);
+  min-height: var(--size);
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.note-control {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #C55;
+  transition: .5s;
+}
+.note-control-wrapper:hover .note-control {
+  width: 20px;
+  height: 20px;
+}
+.note-body {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  cursor: default;
+}
+.note-body:hover {
+  background-color: #252525;
+}
+
+/* TODO: Refactor the note finished */
+/* The code below is experimantal */
+
+.note--finished {
+  color: #383838;
+  position: relative;
+}
+.note--finished .note-control {
+  background-color: #383838;
+}

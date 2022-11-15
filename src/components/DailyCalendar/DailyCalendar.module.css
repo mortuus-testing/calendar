@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.container::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -25px;
+  left: 0px;
+  background-image: url('./sakura.png');
+  background-size: 95%;
+  background-repeat: no-repeat;
+  padding: 30px;
+  z-index: -1;
+  pointer-events: none;
+}
+.day, .date, .month-year {
+  filter: drop-shadow(0 0 2px black);
+}
+
+.day {
+  font-size: 30px;
+  font-weight: bold;
+}
+.date {
+  font-size: 120px;
+  font-weight: bold;
+}
+.month-year {
+  font-size: 20px;
+}
+
+.menu {
+  --size: 30px;
+  --offset: 5px;
+  position: absolute;
+  right: var(--offset);
+  bottom: var(--offset);
+  height: var(--size);
+  display: flex;
+}
+
+.menu-item {
+  width: var(--size);
+  height: var(--size);
+  padding: 5px;
+  color: white;
+  opacity: .3;
+}
+.menu-item:hover {
+  opacity: 1;
+}

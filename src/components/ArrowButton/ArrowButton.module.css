@@ -1,0 +1,22 @@
+.button {
+  --size: 40px;
+  --center: calc(50% - var(--size)/2);
+  --offset: 5px;
+  width: var(--size);
+  height: var(--size);
+  padding: 5px;
+  position: absolute;
+  top: var(--center);
+  color: white;
+  opacity: .4;
+  filter: drop-shadow(0 0 2px black)
+}
+.button:hover {
+  opacity: 1;
+}
+.arrow-left {
+  left: var(--offset);
+}
+.arrow-right {
+  right: var(--offset);
+}

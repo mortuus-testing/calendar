@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+}
+.month-year {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.day-placeholder-container {
+  display: flex;
+  background-color: #C44;
+}
+.date-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.day-placeholder {
+  width: calc(100% / 7);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.day-placeholder {
+  font-weight: bold;
+  font-size: 13px;
+}
+.calendar-control {
+  --size: 30px;
+  --offset: 5px;
+  position: absolute;
+  right: var(--offset);
+  bottom: var(--offset);
+  height: var(--size);
+  display: flex;
+}
+.control-item {
+  width: var(--size);
+  height: var(--size);
+  padding: 5px;
+  opacity: .3;
+}
+.control-item:hover {
+  opacity: 1;
+}
