@@ -70,17 +70,19 @@ export default function NoteEditor(props: NoteEditorProps) {
       <div className={styles.form}>
         <div className={styles['form-placeholder']}>Title</div>
         <input
-          type="text"
-          className={styles['title-input']}
-          value={titleInput}
-          onInput={e => {setTitleInput(e.currentTarget.value)}}
-        />
+            type="text"
+            className={styles['title-input']}
+            value={titleInput}
+            onInput={e => {setTitleInput(e.currentTarget.value)}}
+          />
         <div className={styles['form-placeholder']}>Content</div>
-        <textarea 
-          className={styles['content-input']}
-          value={contentInput}
-          onInput={e => {setContentInput(e.currentTarget.value)}}
-        ></textarea>
+        <div className={styles['content-input-wrapper']}>
+          <textarea 
+            className={styles['content-input']}
+            value={contentInput}
+            onInput={e => {setContentInput(e.currentTarget.value)}}
+          ></textarea>
+        </div>
       </div>
       {
         props.isCreatingNew || props.id === ''

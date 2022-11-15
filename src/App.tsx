@@ -84,7 +84,6 @@ export default function App() {
 
   return (
     <div className={`${styles.app} ${styles['app--compact']}`}>
-      {/* <div className={`${styles.card} ${styles['first-card']} ${styles['card--flipped']}`}> */}
       <div className={`${styles.card} ${styles['first-card']}`}>
         <div className={styles['card__front-page']}>
           <DailyCalendar

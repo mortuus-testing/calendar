@@ -1,62 +1,63 @@
 import { INote } from "../types";
 import getDateString from "./getDateString";
 import getRandomId from "./getRandomId";
-
-const today = new Date()
-const yesterday = new Date()
-const tomorrow = new Date()
-
-yesterday.setDate(today.getDate() - 1)
-tomorrow.setDate(today.getDate() + 1)
+import getRelativeDateString from "./getRelativeDateString";
 
 const notes: INote[] = [
   {
     id: getRandomId(),
-    date: getDateString(today),
-    title: 'Doing homework',
-    content: '',
-    finished: true
-  },
-  {
-    id: getRandomId(),
-    date: getDateString(today),
+    date: getRelativeDateString(0),
     title: 'Fixing bug',
+    content: 'The app crash during unsuccessful login attempt',
+    finished: true
+  },
+  {
+    id: getRandomId(),
+    date: getRelativeDateString(0),
+    title: 'Go shopping',
+    content: 'Shopping list:\n- Egg\n- Flour\n- Salt',
+    finished: false
+  },
+  {
+    id: getRandomId(),
+    date: getRelativeDateString(0),
+    title: 'Thinking about the meaning of human existence',
     content: '',
     finished: false
   },
   {
     id: getRandomId(),
-    date: getDateString(today),
-    title: 'Go to bank then go to train station and buy a ticket to Singapore',
+    date: getRelativeDateString(0),
+    title: 'Watering plant',
     content: '',
     finished: false
   },
   {
     id: getRandomId(),
-    date: getDateString(today),
-    title: 'Watering the plant',
-    content: '',
-    finished: false
-  },
-  {
-    id: getRandomId(),
-    date: getDateString(yesterday),
-    title: 'Read a book',
+    date: getRelativeDateString(-1),
+    title: 'Go to library',
     content: '',
     finished: true
   },
   {
     id: getRandomId(),
-    date: getDateString(yesterday),
+    date: getRelativeDateString(-1),
     title: 'Buy some tomatoes',
     content: '',
     finished: true
   },
   {
     id: getRandomId(),
-    date: getDateString(tomorrow),
+    date: getRelativeDateString(2),
     title: 'Fix water pipe',
     content: '',
+    finished: false
+  },
+  {
+    id: getRandomId(),
+    date: getRelativeDateString(36),
+    title: 'Go to zoo',
+    content: "Don't forget to bring a camera",
     finished: false
   }
 ]
